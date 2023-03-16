@@ -127,8 +127,8 @@
       <h4 class="post-title">Contenido</h4><br>
       <ul>
         <li><a href="#enumeration">Enumeración</a></li>
-        <li><a href="#intrusion">Intrusión</a></li>
-        <li><a href="#privesc">Escalada de privilegios</a></li>
+        <li><a href="#shell-svc_acc">Shell - svc_acc</a></li>
+        <li><a href="#shell-root">Shell - root</a></li>
       </ul>
   </div>
 
@@ -146,7 +146,7 @@
 <div class="language-python highlighter-rouge contenedor"><div class="highlight"><pre class="highlight">
 <code><span class="ve">❯ nmap </span><span class="p">10.10.11.156
 Nmap scan report for 10.10.11.156  
-PORT      STATE SERVICE
+PORT   STATE SERVICE
 22/tcp open  ssh
 80/tcp open  http</span>
 </code></pre></div></div><br>
@@ -164,8 +164,8 @@ PORT      STATE SERVICE
 </code></pre></div></div><br>
 </section>
 
-<section class="post" id="intrusion">
-<br><h3 class="post-title">Intrusión</h3><br>
+<section class="post" id="shell-svc_acc">
+<br><h3 class="post-title">Shell - svc_acc</h3><br>
 <p class="plain-text">Al abrir el nuevo dominio podemos ver una web que nos permite subir una imagen, y algo interesante es que nos dice que esta montado en Flask, que es reconocido por tener la vulnerabilidad de <code class="language-plaintext highlighter-rouge">Server Side Template Injection</code> en este tipo de CTFs</p>
 <a href="/htb/late/3.png" target="_blank"><div><p><img src="/htb/late/3.png"></p></div></a>
 
@@ -254,8 +254,8 @@ uid=1000(svc_acc) gid=1000(svc_acc) groups=1000(svc_acc)
 </code></pre></div></div><br>
 </section>
 
-<section class="post" id="privesc">
-<br><h3 class="post-title">Escalada de privilegios</h3><br>
+<section class="post" id="shell-root">
+<br><h3 class="post-title">Shell - root</h3><br>
 
 <p class="plain-text">Si listamos procesos con <a href="https://github.com/DominicBreuker/pspy">pspy</a> e iniciamos sesión por ssh en otra terminal podemos ver que root ejecuta un script con bash en cada inicio de sesión de ssh</p>
 <div class="language-python highlighter-rouge contenedor"><div class="highlight"><pre class="highlight">
