@@ -6769,6 +6769,10 @@ pre.highlight,
     color: #D9BF47
 }
 
+.highlight .ro {
+    color: #E01B24
+}
+
 .highlight .il {
 	color: #ae81ff
 }
