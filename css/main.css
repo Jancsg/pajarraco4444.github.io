@@ -6871,7 +6871,5 @@ pre.highlight code,
 
 
 .izquierda {
-  position: fixed;
-  transform: translateX(270%);
   width: 300px;
 }
